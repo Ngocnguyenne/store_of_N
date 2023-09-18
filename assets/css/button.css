@@ -1,0 +1,87 @@
+:root {
+  --primary-color: #95fe9e;
+  --dark-color: #181818;
+}
+
+.order_top {
+  position: relative;
+  margin-top: 50px;
+  padding: 15px 45px;
+  background: var(--primary-color);
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--dark-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+}
+
+.order_top:hover {
+  border: 1px solid var(--primary-color);
+  animation: wind 2s ease-in-out infinite;
+}
+
+.btn-buy {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+}
+
+.btn-buy {
+  position: relative;
+  display: flex;
+  font-weight: 600;
+  font-size: 20px;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.btn-buy p {
+  margin: 0;
+  position: relative;
+  font-size: 20px;
+  color: var(--dark-color);
+}
+
+.btn-buy::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: var(--primary-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+
+.btn-buy p::before {
+  position: absolute;
+  content: "Mua";
+  width: 0%;
+  inset: 0;
+  color: var(--primary-color);
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+
+.btn-buy:hover::after {
+  width: 100%;
+}
+
+.btn-buy:hover p::before {
+  width: 100%;
+}
+
+.btn-buy:hover svg {
+  transform: translateX(4px);
+  color: var(--primary-color);
+}
+
+.btn-buy svg {
+  color: var(--dark-color);
+  transition: 0.2s;
+  position: relative;
+  width: 15px;
+  transition-delay: 0.2s;
+}
